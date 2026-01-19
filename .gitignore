@@ -1,0 +1,4 @@
+**/__pycache__/
+raw_data/
+clean_data/
+venv/
