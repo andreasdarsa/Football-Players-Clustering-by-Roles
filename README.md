@@ -1,11 +1,13 @@
-# Midfielders Clustering Project
+# Football Players Clustering by Roles
 
-This project focuses on clustering football midfielders based on their performance metrics and playing styles. Below is a summary of the clustering workflow and methodologies used:
+## Problem Statement
+This project aims to identify football player roles using **unsupervised learning** instead of relying on predefined positions. By clustering players based on their **in-game statistics**, we can reveal **tactical roles**, **hybrid positions**, and **rare playstyles**, useful for scouting, recruitment, and tactical analysis.
 
 ## Data Preparation
 - Collected player statistics from the Kaggle dataset in https://www.kaggle.com/datasets/hubertsidorowicz/football-players-stats-2024-2025.
 - Cleaned and preprocessed the data (handled missing values, normalized features).
 - Selected relevant features for clustering (e.g., passes, tackles, dribbles, progressive carries).
+- Filtered dataset to select players with sufficient playing time (>=900 minutes)
 
 ## Exploratory Data Analysis (EDA)
 - Visualized distributions of key features.
@@ -53,6 +55,34 @@ print(similar_players)
 - It locates the player's cluster and compares feature vectors to find the closest matches.
 - The output is a list of players with similar playing styles and metrics.
 
+## How to use
+1. Clone this repository
+```Bash
+git clone https://github.com/andreasdarsa/Football-Players-Clustering-by-Roles.git
+cd Football-Players-Clustering-by-Roles
+```
+2. Create virtual environment
+```Bash
+python -m venv venv
+```
+- On Windows:
+```Bash
+venv\Scripts\activate
+```
+- On Linux/Mac:
+```Bash
+source venv/bin/activate
+```
+3. Install dependencies
+```python
+pip install --upgrade pip
+pip install -r requirements.txt
+```
+4. Run main script
+```python
+python clustering.py
+```
+
 ## Visualization
 ![Cluster Scatter Plot](img/scatter_plot.png)
 
@@ -61,4 +91,4 @@ print(similar_players)
 
 ---
 
-For more details, see the code and notebooks in this repository.
+For more details, see the code in this repository.
